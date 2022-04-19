@@ -11,10 +11,10 @@ const ProfilePage = () => {
     async function fetchData() {
       const { data } = await axios.get(`https://api.github.com/users/FahrasNH`)
 
-      setProfile({ ...profile, ...data })
+      setProfile(data)
     }
     fetchData()
-  }, [profile])
+  }, [])
 
   return (
     <AccessSideBar
