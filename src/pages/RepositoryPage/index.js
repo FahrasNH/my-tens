@@ -46,7 +46,10 @@ const RepositoryPage = () => {
                   <p className="mr-[10px] font-semibold text-[14px]">
                     {repo.language}
                   </p>
-                  <span className="rounded-full px-[15px] text-[12px] flex items-center font-semibold">
+                  <span className="pl-[20px] text-[12px] flex items-center">
+                    Last update :{' '}
+                  </span>
+                  <span className="pl-[5px] text-[12px] flex items-center font-semibold">
                     {moment(repo.updated_at).format('DD MMM YYYY')}
                   </span>
                 </div>
