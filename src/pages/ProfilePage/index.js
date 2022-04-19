@@ -21,8 +21,8 @@ const ProfilePage = () => {
       staticConst={staticConst.profile_menu.user.user_menu}
       cardTitle="Public profile"
     >
-      <div className="mt-7 flex">
-        <div className="w-[30%] shadow appearance-none border rounded-lg border-2-[#88919B] mr-[20px] h-full">
+      <div className="mt-7 smallPc:flex largePc:flex">
+        <div className="mobile:m-auto mobile:mb-8 tab:m-auto tab:mb-8 mobile:w-full w-[40%] w-[30%] shadow appearance-none border rounded-lg border-2-[#88919B] mr-[20px] h-full">
           <div className="p-2">
             <img
               src={profile?.avatar_url}

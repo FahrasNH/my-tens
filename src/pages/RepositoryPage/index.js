@@ -55,7 +55,7 @@ const RepositoryPage = () => {
                 </div>
               </div>
               <div>
-                <div className="flex">
+                <div className="flex mobile:mt-[14px] tab:mt-[14px]">
                   <p className="mr-[20px] font-bold text-[16px]">
                     Watchers: {repo.watchers}
                   </p>
