@@ -4,6 +4,7 @@ import { staticConst } from '../../static/staticConts'
 
 import axios from 'axios'
 import moment from 'moment'
+import { Text, View } from '../../components/atoms'
 
 const RepositoryPage = () => {
   const [repos, setRepos] = useState()
@@ -23,48 +24,58 @@ const RepositoryPage = () => {
       staticConst={staticConst.profile_menu.user.user_menu}
       cardTitle="List Repository"
     >
-      <div>
+      <View>
         <ul>
           {(repos || []).map((repo, idx) => (
             <li
               key={idx}
               className="py-[20px] border-b-2 border-gray-200 smallPc:flex largePc:flex justify-between"
             >
-              <div>
-                <div className="flex">
-                  <a
+              <View>
+                <View className="flex">
+                  <Text
+                    type="anc"
                     href={repo.html_url}
                     className="mr-[20px] font-bold text-[24px] text-[#1956DB]"
                   >
                     {repo.name}
-                  </a>
-                  <span className="rounded-full border border-[#88919B] px-[15px] text-[12px] flex items-center font-semibold text-[#88919B]">
+                  </Text>
+                  <Text
+                    type="span"
+                    className="rounded-full border border-[#88919B] px-[15px] text-[12px] flex items-center font-semibold text-[#88919B]"
+                  >
                     {repo.private ? 'Private' : 'Public'}
-                  </span>
-                </div>
-                <div className="flex mt-[14px]">
-                  <p className="mr-[10px] font-semibold text-[14px]">
+                  </Text>
+                </View>
+                <View className="flex mt-[14px]">
+                  <Text className="mr-[10px] font-semibold text-[14px]">
                     {repo.language}
-                  </p>
-                  <span className="pl-[20px] text-[12px] flex items-center">
+                  </Text>
+                  <Text
+                    type="span"
+                    className="pl-[20px] text-[12px] flex items-center"
+                  >
                     Last update :{' '}
-                  </span>
-                  <span className="pl-[5px] text-[12px] flex items-center font-semibold">
-                    {moment(repo.updated_at).format('DD MMM YYYY')}
-                  </span>
-                </div>
-              </div>
-              <div>
-                <div className="flex mobile:mt-[14px] tab:mt-[14px]">
-                  <p className="mr-[20px] font-bold text-[16px]">
+                  </Text>
+                  <Text
+                    type="span"
+                    className="pl-[5px] text-[12px] flex items-center font-semibold"
+                  >
+                    {moment(repo.pushed_at).format('DD MMM YYYY')}
+                  </Text>
+                </View>
+              </View>
+              <View>
+                <View className="flex mobile:mt-[14px] tab:mt-[14px]">
+                  <Text className="mr-[20px] font-bold text-[16px]">
                     Watchers: {repo.watchers}
-                  </p>
-                </div>
-              </div>
+                  </Text>
+                </View>
+              </View>
             </li>
           ))}
         </ul>
-      </div>
+      </View>
     </AccessSideBar>
   )
 }

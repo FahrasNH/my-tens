@@ -12,11 +12,13 @@ const Input = ({
 }) => {
   return (
     <Fragment>
-      <label
-        className={`block text-gray-700 text-sm font-bold mb-2 ${labelClassName}`}
-      >
-        {label}
-      </label>
+      {label && (
+        <label
+          className={`block text-gray-700 text-sm font-bold mb-2 ${labelClassName}`}
+        >
+          {label}
+        </label>
+      )}
       <input
         type={type}
         value={value}

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { AccessSideBar } from '../../components/templates'
 import { staticConst } from '../../static/staticConts'
-import { Button, Input, Textarea } from '../../components/atoms'
+import { Button, Image, Input, Textarea, View } from '../../components/atoms'
 
 import axios from 'axios'
 
@@ -21,24 +21,24 @@ const ProfilePage = () => {
       staticConst={staticConst.profile_menu.user.user_menu}
       cardTitle="Public profile"
     >
-      <div className="mt-7 smallPc:flex largePc:flex">
-        <div className="mobile:m-auto mobile:mb-8 tab:m-auto tab:mb-8 mobile:w-full w-[40%] w-[30%] shadow appearance-none border rounded-lg border-2-[#88919B] mr-[20px] h-full">
-          <div className="p-2">
-            <img
+      <View className="mt-7 smallPc:flex largePc:flex">
+        <View className="mobile:m-auto mobile:mb-8 tab:m-auto tab:mb-8 mobile:w-full w-[40%] w-[30%] shadow appearance-none border rounded-lg border-2-[#88919B] mr-[20px] h-full">
+          <View className="p-2">
+            <Image
               src={profile?.avatar_url}
               className="rounded-md"
               alt="avIcon"
             />
-          </div>
-          <div className="p-2 pb-0">
+          </View>
+          <View className="p-2 pb-0">
             <Button primary>Change Photo</Button>
-          </div>
-          <div className="p-2">
+          </View>
+          <View className="p-2">
             <Button>Hapus</Button>
-          </div>
-        </div>
-        <div className="w-[100%]">
-          <div className="mb-4">
+          </View>
+        </View>
+        <View className="w-[100%]">
+          <View className="mb-4">
             <Input
               name="name"
               type="text"
@@ -47,8 +47,8 @@ const ProfilePage = () => {
               disabled
               value={profile?.name}
             />
-          </div>
-          <div className="mb-4">
+          </View>
+          <View className="mb-4">
             <Textarea
               name="bio"
               type="text"
@@ -58,8 +58,8 @@ const ProfilePage = () => {
               rows={3}
               value={profile?.bio}
             />
-          </div>
-          <div className="mb-4">
+          </View>
+          <View className="mb-4">
             <Input
               name="url"
               type="text"
@@ -68,8 +68,8 @@ const ProfilePage = () => {
               disabled
               value={profile?.url}
             />
-          </div>
-          <div className="mb-4">
+          </View>
+          <View className="mb-4">
             <Input
               name="company"
               type="text"
@@ -78,8 +78,8 @@ const ProfilePage = () => {
               disabled
               value={profile?.company}
             />
-          </div>
-          <div className="mb-4">
+          </View>
+          <View className="mb-4">
             <Input
               name="location"
               type="text"
@@ -88,9 +88,9 @@ const ProfilePage = () => {
               disabled
               value={profile?.location}
             />
-          </div>
-        </div>
-      </div>
+          </View>
+        </View>
+      </View>
     </AccessSideBar>
   )
 }
