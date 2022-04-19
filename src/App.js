@@ -1,5 +1,23 @@
+import RouteList from './routes/MainRoutes'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+
 function App() {
-  return <h1 className="text-3xl font-bold underline">Test</h1>
+  return (
+    <Router>
+      <div>
+        <Routes>
+          {RouteList.map((el, index) => (
+            <Route
+              path={el.path}
+              exact={el.exact}
+              element={el.component}
+              key={index}
+            />
+          ))}
+        </Routes>
+      </div>
+    </Router>
+  )
 }
 
 export default App
