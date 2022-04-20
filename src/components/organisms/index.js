@@ -1,3 +1,4 @@
 import SideMenu from './SideMenu'
+import Navbar from './Navbar'
 
-export { SideMenu }
+export { SideMenu, Navbar }

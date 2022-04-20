@@ -10,5 +10,5 @@ module.exports = {
       largePc: { min: '1026px', max: '2560px' },
     },
   },
-  plugins: [],
+  plugins: [require('flowbite/plugin')],
 }

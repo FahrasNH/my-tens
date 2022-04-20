@@ -6,7 +6,7 @@ const SideMenu = ({ staticConst }) => {
   const navigate = useNavigate()
 
   return (
-    <View className="rounded-lg shadow border border-gray-200 bg-white py-5 sticky top-5">
+    <View className="rounded-lg shadow border border-gray-200 bg-white py-5 sticky top-20">
       <View className="mt-2">
         {staticConst.map((el, index) => (
           <View
@@ -20,7 +20,7 @@ const SideMenu = ({ staticConst }) => {
                   : ''
               } text-sm py-1 hover:bg-[#2E3339] hover:text-white cursor-pointer flex items-center px-4`}
             >
-              <span>{el.menu.icon}</span>
+              <View type="span">{el.menu.icon}</View>
               <View className="px-4 py-2">{el.menu.title}</View>
             </View>
           </View>

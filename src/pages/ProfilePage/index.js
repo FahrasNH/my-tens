@@ -31,10 +31,10 @@ const ProfilePage = () => {
             />
           </View>
           <View className="p-2 pb-0">
-            <Button primary>Change Photo</Button>
+            <Button isButton="primary">Change Photo</Button>
           </View>
           <View className="p-2">
-            <Button>Hapus</Button>
+            <Button isButton="secondary">Hapus</Button>
           </View>
         </View>
         <View className="w-[100%]">
